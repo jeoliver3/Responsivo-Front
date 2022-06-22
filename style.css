@@ -1,0 +1,71 @@
+img{
+    max-width: 100%;
+    display: block;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+}
+h1{
+    grid-column: 1/-1;
+}
+
+@media(max-width:600px) {
+/* o media querie permite que seja ativado quando a tela tiver no maximo 600px de largura
+a patir de um valor definido, 
+nesse caso 600px
+max-width seria abaixo de 600px (menor que 600px), que só será ativado quando a tela atingir
+600px de largura, antes disso, permanece como antes. o media querie permite q o
+site seja respnsivo, transformando as duas coluas de antes (1fr-1fr) em apenas
+uma, quando atingir 600px de largura*/
+
+div{
+ grid-template-columns: 1fr;
+}
+
+h1{
+    
+    background: lightcoral;
+    /* abaixo de 600px aparece o background lightcoral, acima disso não*/
+}
+}
+
+
+
+@media(min-width: 1000px){
+/* min-width: é igual a maior que. ele vai aplicar nesse caso
+acima de 1000px o que foi definido.*/
+
+
+html{
+    font-size: 150%;
+    /*acima de 1000px ele aumenta a fonte de todo html para 1000px, abaixo
+    disso não*/
+}
+}
+@media(min-width:700px) and (max-width:900px){
+  p{
+      background: lightskyblue;
+      
+  }
+    /* eu to falando que acima de 700px e abaxo de 900px,
+    quando chegar em 700px ele pinta de azul, continuo aumentando a tela e
+    quando chega em 900px ele nao pinta mais */ 
+
+}
+
+@media screen {
+    body{
+        background: lightpink;
+    }
+}
+/* com media screen ele só ativa o estilo do css definido quando estiver
+na tela. para imprimir por exemplo ele nao aparece o rosa do body pq eu 
+disse para o media apenas tela (screen)
+se no lugar de screen eu coloco print, ele na hora de imprimir
+vai aparecer o fundo rosa*/
+
+
